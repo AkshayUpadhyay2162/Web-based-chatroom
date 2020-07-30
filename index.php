@@ -13,10 +13,17 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- Third party plugin CSS-->
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+         <!-- Third party plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+        *{
+            margin: 0; padding: 0; font-family: 'Josefin Sans', sans-serif; 
+            font-size: 17px;
+        }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -35,11 +42,11 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead" id="home">
-            <div class="container h-100">
+            <div class="container h-50">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
                         <h1 class="text-white font-weight-bold">iChat</h1>
-                        <hr class="divider my-4" />
+                        <hr class="divider my-3 mx-auto" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">Chat with your friends without worrying about the chat logs. Now you can freely chat with your friends and relatives.</p>
@@ -48,7 +55,14 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="room" placeholder="Enter room name">
                                 </div>
-                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Claim room</button>
+                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Create new room</button>
+                            </form>
+                            <h3 class="p-3 text-white">Or</h3>
+                            <form action="#" method="GET">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="room" placeholder="Enter room name">
+                                </div>
+                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Open existing room</button>
                             </form>
                         </div>
                         </div>
@@ -61,7 +75,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                         <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider my-4" />
+                        <hr class="divider my-4 mx-auto" />
                         <p class="text-muted mb-5">If you have any query related to this website then contact us.</p>
                     </div>
                 </div>

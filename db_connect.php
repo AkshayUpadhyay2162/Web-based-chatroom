@@ -6,10 +6,7 @@ $dbname = "ichat";
 
 
 $conn = mysqli_connect($servername,$hostname,$password,$dbname);
-if($conn){
- echo "Connected to database";
-}
-else{
+if(!$conn){
     die("Connection failed".mysqli_connect_error());
 }
 
