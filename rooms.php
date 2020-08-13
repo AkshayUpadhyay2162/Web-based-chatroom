@@ -99,7 +99,7 @@ if ($result) {
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
           <li class="nav-item"><a id="leave" class="btn nav-link js-scroll-trigger" onclick="Leave()">Leave</a></li>
@@ -111,7 +111,7 @@ if ($result) {
     function Leave(){
       var check = confirm("Do you want to leave?");
       if(check==true){
-        window.location.href = "index.php";
+        window.location.href = "index.html";
       }  
     }
   </script>
