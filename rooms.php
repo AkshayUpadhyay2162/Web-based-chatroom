@@ -102,10 +102,19 @@ if ($result) {
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php">Home</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+          <li class="nav-item"><a id="leave" class="btn nav-link js-scroll-trigger" onclick="Leave()">Leave</a></li>
         </ul>
       </div>
     </div>
   </nav>
+  <script>
+    function Leave(){
+      var check = confirm("Do you want to leave?");
+      if(check==true){
+        window.location.href = "index.php";
+      }  
+    }
+  </script>
   <header class="masthead" id="home">
     <div class="container bg-transparent">
       <h2 class="text-center text-white mb-5">Chat Messages - <?php echo $roomname ?></h2>
