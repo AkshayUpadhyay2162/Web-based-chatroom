@@ -1,6 +1,7 @@
 <?php
 $roomname = $_POST['room'];
 $clientname = $_POST['name'];
+$roompassword = $_POST['password'];
 
 
 if(strlen($roomname)>20 or strlen($roomname)<2){
@@ -36,12 +37,12 @@ if($result){
     echo '</script>';
     }
     else{
-        $sql = "INSERT INTO `rooms`(`Roomname`) VALUES('$roomname');";
+        $sql = "INSERT INTO `rooms`(`Roomname`,`rpassword`) VALUES('$roomname','$roompassword');";
         if(mysqli_query($conn,$sql)){
             $message = "Your room is ready. You can start chatting now.";
             echo '<script language="javascript">';
             echo 'alert("'.$message.'");';
-            echo 'window.location="http://localhost/Chatroom/rooms.php?Roomname='.$roomname.'&clientname='.$clientname.'";';
+            echo 'window.location="http://localhost/Chatroom/rooms.php?Roomname='.$roomname.'&clientname='.$clientname.'&Roompassword='.$roompassword.'";';
             echo '</script>';
         }      
     }

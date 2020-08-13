@@ -50,10 +50,15 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">Chat with your friends without worrying about the chat logs. Now you can freely chat with your friends and relatives.</p>
+                        <h3 class="text-white font-weight-bold mb-4">Enter into an exhisting room</h3>
                         <div class="container mx-auto w-50 bg-transparent">
+
                             <form action="rooms.php" method="GET">
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="Roomname" placeholder="Enter room name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" name="Roompassword" placeholder="Enter room password">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="clientname" placeholder="Enter your name">

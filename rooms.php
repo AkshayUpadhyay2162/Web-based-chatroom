@@ -2,10 +2,11 @@
 
 $roomname = $_GET['Roomname'];
 $clientname = $_GET['clientname'];
+$roompassword = $_GET['Roompassword'];
 
 include 'db_connect.php';
 
-$sql = "SELECT * FROM `rooms` WHERE Roomname = '$roomname';";
+$sql = "SELECT * FROM `rooms` WHERE Roomname = '$roomname' and rpassword = '$roompassword';";
 $result = mysqli_query($conn, $sql);
 if ($result) {
 
