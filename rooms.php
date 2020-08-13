@@ -91,65 +91,92 @@ if ($result) {
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php">Home</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <header class="masthead">
-    <div class="h-75">
-  <div class="container bg-transparent">
-    <h2 class="text-center text-white mb-5">Chat Messages - <?php echo $roomname ?></h2>
-    <div class="container">
-      <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
-      <p>Hello. How are you today?</p>
-      <span class="time-right">11:00</span>
-    </div>
-    </div>
+  <header class="masthead" id="home">
+    <div class="container bg-transparent">
+      <h2 class="text-center text-white mb-5">Chat Messages - <?php echo $roomname ?></h2>
+      <div class="container">
+        <div class="anyClass" style="height: 350px; overflow-y:scroll">
+          <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;">
+          <p>Hello. How are you today?</p>
+          <span class="time-right">11:00</span>
+        </div>
+      </div>
     </div>
     <div class="container bg-transparent">
-    <div class="form-group">
-      <input type="text" name="msg" id="msg" class="form-control" placeholder="Enter message">
-    </div>
-    <button class="btn btn-dark" name="submitmsg" id="submitmsg">Sends</button>
+      <div class="form-group">
+        <input type="text" name="msg" id="msg" class="form-control" placeholder="Enter message">
+      </div>
+      <button class="btn btn-dark" name="submitmsg" id="submitmsg">Sends</button>
     </div>
   </header>
   <section class="page-section" id="contact">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider my-4 mx-auto" />
-                        <p class="text-muted mb-5">If you have any query related to this website then contact us.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                        <div>+916265324268</div>
-                    </div>
-                    <div class="col-lg-4 mr-auto text-center">
-                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                        <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                        <a class="d-block" href="mailto:contact@yourwebsite.com">akshayu383@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container"><div class="small text-center text-muted">Copyright © iChat.com</div></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Let's Get In Touch!</h2>
+          <hr class="divider my-4 mx-auto" />
+          <p class="text-muted mb-5">If you have any query related to this website then contact us.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+          <div>+916265324268</div>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+          <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+          <a class="d-block" href="mailto:contact@yourwebsite.com">akshayu383@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright © iChat.com</div>
+    </div>
+  </footer>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+  <script>
+
+var input = document.getElementById("msg");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("submitmsg").click();
+  }
+});
+
+    $('#submitmsg').click(function() {
+      var clientmsg = $('#msg').val();
+      $.post("postmsg.php", {
+          text: clientmsg,
+          room: '<?php echo $roomname ?>',
+          ip: '<?php echo $_SERVER['REMOTE_ADDR'] ?>'
+        },
+        function(data, status) {
+          document.getElementsByClassName('anyClass')[0].innerHTML = data;
+        });
+  $("#msg").val("");
+      return false;
+    });
+  
+  </script>
 </body>
 
 </html>

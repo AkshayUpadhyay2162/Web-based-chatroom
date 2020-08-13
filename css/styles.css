@@ -391,6 +391,10 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem;
 }
+#scroll{
+  height: 350px; 
+  overflow-y:scroll
+}
 
 .lead {
   font-size: 1.25rem;
@@ -3914,7 +3918,7 @@ input[type=button].btn-block {
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
-  transform: scale(3);
+  transform: scale(1);
   transition: transform .3s;
 }
 .nav-link.disabled {
