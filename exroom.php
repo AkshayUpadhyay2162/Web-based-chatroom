@@ -51,17 +51,17 @@
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">Chat with your friends without worrying about the chat logs. Now you can freely chat with your friends and relatives.</p>
                         <div class="container mx-auto w-50 bg-transparent">
-                            <form action="claim.php" method="POST">
+                            <form action="rooms.php" method="GET">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="room" placeholder="Enter room name">
+                                    <input type="text" class="form-control" name="Roomname" placeholder="Enter room name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="name" placeholder="Enter your name">
+                                    <input type="text" class="form-control" name="clientname" placeholder="Enter your name">
                                 </div>
-                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Create new room</button>
+                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Enter</button>
                             </form>
                             <div class="container mt-3">
-                            <a href="exroom.php">Enter into an existing room</a>
+                            <a href="index.php">Create a room</a>
                             </div>
                         </div>
                         </div>
