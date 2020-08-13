@@ -3,10 +3,10 @@
 $roomname = $_POST['Roomname'];
 $clientname = $_POST['clientname'];
 $roompassword = $_POST['Roompassword'];
-if(strlen($roomname)==0 or strlen($clientname)==0 or strlen($roompassword)==0){
+if (strlen($roomname) == 0 or strlen($clientname) == 0 or strlen($roompassword) == 0) {
   $message = "All fields are required!";
   echo '<script language="javascript">';
-  echo 'alert("'.$message.'");';
+  echo 'alert("' . $message . '");';
   echo 'window.location="http://localhost/Chatroom/exroom.php";';
   echo '</script>';
 }
@@ -110,7 +110,7 @@ if ($result) {
     <div class="container bg-transparent">
       <h2 class="text-center text-white mb-5">Chat Messages - <?php echo $roomname ?></h2>
       <div class="container">
-        <div class="anyClass" style="height: 350px; overflow-y:scroll">          
+        <div class="anyClass" style="height: 350px; overflow-y:scroll">
         </div>
       </div>
     </div>
@@ -158,25 +158,27 @@ if ($result) {
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
   <script>
-// checking for messages 
-setInterval(checkFunction,1000);
+    // checking for messages 
+    setInterval(checkFunction, 1000);
 
-function checkFunction(){
-  $.post("htcon.php",{room: '<?php echo $roomname ?>'},
-  function(data,status){
-    document.getElementsByClassName('anyClass')[0].innerHTML = data;
-  }
-  )
+    function checkFunction() {
+      $.post("htcon.php", {
+          room: '<?php echo $roomname ?>'
+        },
+        function(data, status) {
+          document.getElementsByClassName('anyClass')[0].innerHTML = data;
+        }
+      )
 
-}
+    }
 
-var input = document.getElementById("msg");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("submitmsg").click();
-  }
-});
+    var input = document.getElementById("msg");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("submitmsg").click();
+      }
+    });
 
     $('#submitmsg').click(function() {
       var clientmsg = $('#msg').val();
@@ -188,10 +190,9 @@ input.addEventListener("keyup", function(event) {
         function(data, status) {
           document.getElementsByClassName('anyClass')[0].innerHTML = data;
         });
-  $("#msg").val("");
+      $("#msg").val("");
       return false;
     });
-  
   </script>
 </body>
 
