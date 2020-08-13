@@ -7,7 +7,7 @@ if (strlen($roomname) == 0 or strlen($clientname) == 0 or strlen($roompassword) 
   $message = "All fields are required!";
   echo '<script language="javascript">';
   echo 'alert("' . $message . '");';
-  echo 'window.location="http://localhost/Chatroom/exroom.php";';
+  echo 'window.location="http://localhost/Chatroom/exroom.html";';
   echo '</script>';
 }
 include 'db_connect.php';
@@ -20,7 +20,7 @@ if ($result) {
     $message = "Room does not exists or incorrect password";
     echo '<script language="javascript">';
     echo 'alert("' . $message . '");';
-    echo 'window.location="http://localhost/Chatroom/exroom.php";';
+    echo 'window.location="http://localhost/Chatroom/exroom.html";';
     echo '</script>';
   } else {
   }
