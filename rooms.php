@@ -108,18 +108,18 @@ if ($result) {
     </div>
   </nav>
   <script>
-    function Leave(){
+    function Leave() {
       var check = confirm("Do you want to leave?");
-      if(check==true){
+      if (check == true) {
         window.location.href = "index.html";
-      }  
+      }
     }
   </script>
   <header class="masthead" id="home">
     <div class="container bg-transparent">
       <h2 class="text-center text-white mb-5">Chat Messages - <?php echo $roomname ?></h2>
       <div class="container">
-        <div class="anyClass" style="height: 350px; overflow-y:scroll">
+        <div id="msgbox" class="anyClass" style="height: 350px; overflow-y:scroll">
         </div>
       </div>
     </div>
@@ -168,6 +168,12 @@ if ($result) {
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
   <script>
+    setInterval(scrollBottom,1000);
+    function scrollBottom(){
+      var box  = document.getElementById('msgbox');
+      box.scrollTo(0,document.body.scrollHeight);
+    }
+
     // checking for messages 
     setInterval(checkFunction, 1000);
 
