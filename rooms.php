@@ -3,7 +3,13 @@
 $roomname = $_GET['Roomname'];
 $clientname = $_GET['clientname'];
 $roompassword = $_GET['Roompassword'];
-
+if(strlen($roomname)==0 or strlen($clientname)==0 or strlen($roompassword)==0){
+  $message = "All fields are required!";
+  echo '<script language="javascript">';
+  echo 'alert("'.$message.'");';
+  echo 'window.location="http://localhost/Chatroom/exroom.php";';
+  echo '</script>';
+}
 include 'db_connect.php';
 
 $sql = "SELECT * FROM `rooms` WHERE Roomname = '$roomname' and rpassword = '$roompassword';";
@@ -11,10 +17,10 @@ $result = mysqli_query($conn, $sql);
 if ($result) {
 
   if (mysqli_num_rows($result) == 0) {
-    $message = "Room does not exists.";
+    $message = "Room does not exists or incorrect password";
     echo '<script language="javascript">';
     echo 'alert("' . $message . '");';
-    echo 'window.location="http://localhost/Chatroom";';
+    echo 'window.location="http://localhost/Chatroom/exroom.php";';
     echo '</script>';
   } else {
   }

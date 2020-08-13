@@ -2,9 +2,22 @@
 $roomname = $_POST['room'];
 $clientname = $_POST['name'];
 $roompassword = $_POST['password'];
+if(strlen($roomname)==0 or strlen($clientname)==0 or strlen($roompassword)==0){
+    $message = "All fields are required!";
+    echo '<script language="javascript">';
+    echo 'alert("'.$message.'");';
+    echo 'window.location="http://localhost/Chatroom";';
+    echo '</script>';
+}
+else if(strlen($roompassword)<6){
+    $message = "Password should be of atleast 6 characters!";
+    echo '<script language="javascript">';
+    echo 'alert("'.$message.'");';
+    echo 'window.location="http://localhost/Chatroom";';
+    echo '</script>';
+}
 
-
-if(strlen($roomname)>20 or strlen($roomname)<2){
+else if(strlen($roomname)>20 or strlen($roomname)<2){
     
     $message = "Invalid room name! Please enter a room name between 2 to 20 character.";
     echo '<script language="javascript">';
