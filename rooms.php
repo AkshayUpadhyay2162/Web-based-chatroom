@@ -1,6 +1,7 @@
 <?php
 
 $roomname = $_GET['Roomname'];
+$clientname = $_GET['clientname'];
 
 include 'db_connect.php';
 
@@ -175,7 +176,7 @@ input.addEventListener("keyup", function(event) {
       $.post("postmsg.php", {
           text: clientmsg,
           room: '<?php echo $roomname ?>',
-          ip: '<?php echo $_SERVER['REMOTE_ADDR'] ?>'
+          ip: '<?php echo $clientname ?>'
         },
         function(data, status) {
           document.getElementsByClassName('anyClass')[0].innerHTML = data;

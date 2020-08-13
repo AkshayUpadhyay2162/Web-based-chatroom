@@ -1,5 +1,7 @@
 <?php
 $roomname = $_POST['room'];
+$clientname = $_POST['name'];
+
 
 if(strlen($roomname)>20 or strlen($roomname)<2){
     
@@ -39,7 +41,7 @@ if($result){
             $message = "Your room is ready. You can start chatting now.";
             echo '<script language="javascript">';
             echo 'alert("'.$message.'");';
-            echo 'window.location="http://localhost/Chatroom/rooms.php?Roomname='.$roomname.'";';
+            echo 'window.location="http://localhost/Chatroom/rooms.php?Roomname='.$roomname.'&clientname='.$clientname.'";';
             echo '</script>';
         }      
     }

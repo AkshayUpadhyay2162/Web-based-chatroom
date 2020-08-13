@@ -55,14 +55,10 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="room" placeholder="Enter room name">
                                 </div>
-                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Create new room</button>
-                            </form>
-                            <h3 class="p-3 text-white">Or</h3>
-                            <form action="#" method="GET">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="room" placeholder="Enter room name">
+                                    <input type="text" class="form-control" name="name" placeholder="Enter your name">
                                 </div>
-                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Open existing room</button>
+                                <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Create new room</button>
                             </form>
                         </div>
                         </div>
