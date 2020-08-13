@@ -1,8 +1,8 @@
 <?php
 
-$roomname = $_GET['Roomname'];
-$clientname = $_GET['clientname'];
-$roompassword = $_GET['Roompassword'];
+$roomname = $_POST['Roomname'];
+$clientname = $_POST['clientname'];
+$roompassword = $_POST['Roompassword'];
 if(strlen($roomname)==0 or strlen($clientname)==0 or strlen($roompassword)==0){
   $message = "All fields are required!";
   echo '<script language="javascript">';

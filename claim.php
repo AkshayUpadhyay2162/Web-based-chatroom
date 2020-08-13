@@ -1,8 +1,7 @@
 <?php
 $roomname = $_POST['room'];
-$clientname = $_POST['name'];
 $roompassword = $_POST['password'];
-if(strlen($roomname)==0 or strlen($clientname)==0 or strlen($roompassword)==0){
+if(strlen($roomname)==0 or strlen($roompassword)==0){
     $message = "All fields are required!";
     echo '<script language="javascript">';
     echo 'alert("'.$message.'");';
@@ -52,10 +51,10 @@ if($result){
     else{
         $sql = "INSERT INTO `rooms`(`Roomname`,`rpassword`) VALUES('$roomname','$roompassword');";
         if(mysqli_query($conn,$sql)){
-            $message = "Your room is ready. You can start chatting now.";
+            $message = "Room created successfully.";
             echo '<script language="javascript">';
             echo 'alert("'.$message.'");';
-            echo 'window.location="http://localhost/Chatroom/rooms.php?Roomname='.$roomname.'&clientname='.$clientname.'&Roompassword='.$roompassword.'";';
+            echo 'window.location="http://localhost/Chatroom";';
             echo '</script>';
         }      
     }

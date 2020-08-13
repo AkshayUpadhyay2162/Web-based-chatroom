@@ -64,13 +64,10 @@
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" placeholder="Enter room password">
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Enter your name">
-                            </div>
-                            <button class="btn btn-secondary btn-xl js-scroll-trigger" href="#about">Create new room</button>
+                            <button type="submit" class="btn btn-secondary btn-xl js-scroll-trigger">Create new room</button>
                         </form>
                         <div class="container mt-3">
-                            <a href="exroom.php">Enter into an exhisting room</a>
+                            <a href="exroom.php">Enter into an existing room</a>
                         </div>
                     </div>
                 </div>
